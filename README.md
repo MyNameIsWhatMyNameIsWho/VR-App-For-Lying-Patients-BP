@@ -31,17 +31,6 @@ It extends and improves an existing Unity-based VR rehabilitation application, t
 
 ---
 
-## Installation & Running
-
-1. Clone this repository:
-    ```
-    git clone https://github.com/yourusername/vr-therapeutic-modules.git
-    ```
-2. Open the project in Unity (recommend version: XX.XX.X).
-3. Build for Meta Quest 2/3 via the Android build target.
-4. Follow included instructions in `/Documentation` to deploy to your headset.
-
----
 
 ## User Testing & Feedback
 
