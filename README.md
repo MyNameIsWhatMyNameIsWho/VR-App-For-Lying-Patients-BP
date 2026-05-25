@@ -1,61 +1,60 @@
 # VR Therapeutic Modules for Bedridden Patients
 
-[![Gameplay Video 1](https://img.shields.io/badge/YouTube-Gameplay1-red?logo=youtube)](LINK_TO_YOUR_VIDEO1)
-[![Gameplay Video 2](https://img.shields.io/badge/YouTube-Gameplay2-red?logo=youtube)](LINK_TO_YOUR_VIDEO2)
+**Bachelor Thesis · Czech Technical University in Prague · 2025**
+
+> Unity · C# · Meta Quest 2 & 3 · XR Interaction Toolkit · Android Platform
+
+---
 
 ## Overview
 
-This repository contains a set of interactive VR therapeutic modules designed for bedridden seniors, developed as my Bachelor thesis at Czech Technical University in Prague.
+A set of interactive VR therapeutic modules for bedridden seniors — designed for cognitive and physical stimulation, accessibility, and independent use. Built as my bachelor thesis by extending and refactoring an existing Unity VR rehabilitation application (originally a Master's thesis project).
 
-The project extends and improves an existing Unity-based VR rehabilitation app (originally created as a Master's thesis), with a focus on cognitive and physical stimulation, accessibility, and user-centered design.
-
-- **Platform:** Meta Quest 2/3  
-- **Engine:** Unity (C#)  
-- **Status:** Functional prototype, tested with real patients in a Czech senior care facility
+**Platform:** Meta Quest 2 / 3 (Android)  
+**Status:** Functional prototype — tested with real patients at a Czech senior care facility
 
 ---
 
-## Features
+## What I built
 
-- **Two new VR modules**: Each features original game mechanics and is tailored for accessibility, engagement, and ease of use for elderly users.
-- **Audio tutorials**: Built-in voice guidance for every module, supporting independent use.
-- **User-Centered Design (UCD)**: All development stages incorporated feedback from seniors and staff, iterating based on real user experience.
-- **Legacy code integration**: Successfully analyzed, extended, and refactored complex existing code from a previous Master’s thesis project.
-- **Optimized for Meta Quest**: Seamless VR interaction and performance on Meta Quest 2 and 3.
-
----
-
-## User Testing
-
-The modules were **tested hands-on with senior patients and staff in a real care facility**.  
-User experience and accessibility were improved based on direct observations and feedback from both users and caregivers.
+- **Two original VR mini-games** with purpose-built mechanics for elderly users — engagement, low motor demand, and clear feedback loops
+- **Audio tutorial system** — voice-guided instructions for every module, enabling independent use without staff assistance
+- **Refactored and extended legacy codebase** — analyzed the prior Master's thesis Unity project, identified architecture issues, and restructured before extending
+- **Accessibility-first interaction design** — input choices, UI scale, and feedback tuned through hands-on observation with real users
 
 ---
 
-## Demo Videos
+## Technical stack
 
-- [Gameplay Demo: Module 1](LINK_TO_YOUR_VIDEO1)
-- [Gameplay Demo: Module 2](LINK_TO_YOUR_VIDEO2)
-
----
-
-## Credits
-
-- **Developer & Designer:** Ekaterina Chukina (Bachelor thesis, Czech Technical University in Prague)
-- **Supervisor:** [Your Supervisor's Name]  
-- **Original Application (Master’s Thesis):** [Girl’s Name], Czech Technical University in Prague
-
----
-
-## Acknowledgments
-
-Special thanks to [Girl’s Name] for her Master’s thesis, which provided the foundation for this project.  
-Her original VR rehabilitation app and codebase made this extension and research possible.
+| Area | Details |
+|------|---------|
+| Engine | Unity (URP) |
+| Language | C# |
+| XR | XR Interaction Toolkit 2.5, XR Hands 1.3, OpenXR |
+| Platform | Meta Quest 2/3 via `com.unity.xr.oculus` |
+| Build | Android mobile pipeline (Meta Quest is Android) |
+| Research | `cz.leosrehacek.vr_dashboard_logger` — CTU telemetry package for usage logging |
+| Shaders | Shader Graph (hand shader, interaction feedback materials) |
 
 ---
 
-## Contact
+## Engineering highlights
 
-For questions or collaboration:  
-chukina.eka@gmail.com
+- **Legacy code integration** — inherited a complex multi-scene Unity project; analyzed undocumented systems, refactored for clarity and extensibility, then built on top
+- **Android/Meta Quest build pipeline** — configured Unity for Quest target, managed XR plugin stack, resolved platform-specific interaction issues
+- **User-Centered Design loop** — requirements gathered through direct observation of seniors and caregivers; iterated on interactions until accessible and reliable under real conditions
+- **XR Interaction Toolkit** — hand tracking, spatial UI, and grab/trigger interactions implemented within the XRI framework
 
+---
+
+## User testing
+
+Tested hands-on with senior patients and care staff at a real facility in the Czech Republic. Accessibility and UX were refined through multiple observation rounds — not from a spec, but from watching real users struggle and succeed.
+
+---
+
+## How to run
+
+1. Open in Unity 2022 LTS or later
+2. Configure XR: Project Settings → XR Plug-in Management → enable Oculus / OpenXR
+3. Build to Meta Quest via Android build target, or connect a Quest and use Link for Play mode
